@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Korea Universities 🇰🇷</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+background:#f4f7ff;
+padding:30px;
+
+}
+
+
+h1{
+
+text-align:center;
+color:#1e3c72;
+
+}
+
+
+.card{
+
+background:white;
+margin:20px auto;
+padding:20px;
+max-width:600px;
+border-radius:15px;
+box-shadow:0 5px 15px #aaa;
+
+}
+
+
+.name{
+
+font-size:24px;
+font-weight:bold;
+color:#2a5298;
+
+}
+
+
+.tag{
+
+background:#1e3c72;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+display:inline-block;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<h1>
+🇰🇷 Korean Universities Explorer
+</h1>
+
+
+
+{% for uni in universities %}
+
+
+<div class="card">
+
+
+<div class="name">
+
+{{uni.name}}
+
+</div>
+
+
+<p>
+Ranking:
+{{uni.ranking}}
+
+</p>
+
+
+<p>
+
+Field:
+{{uni.field}}
+
+</p>
+
+
+<span class="tag">
+
+{{uni.scholarship}}
+
+</span>
+
+
+
+</div>
+
+
+{% endfor %}
+
+
+
+</body>
+
+
+</html>
