@@ -8,6 +8,13 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
 
+@app.route("/universities")
+def university_page():
+
+    return render_template(
+        "universities.html",
+        universities=universities
+    )
     result = None
 
     if request.method == "POST":
