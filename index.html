@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>K-Study Navigator AI 🇰🇷</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🇰🇷 K-Study Navigator AI</h1>
+
+<p>
+Smart academic pathway planner for studying in South Korea
+</p>
+
+
+<div class="card">
+
+<h2>🎓 Check Your GKS Readiness</h2>
+
+<form method="POST">
+
+<label>GPA (0-20)</label>
+<input name="gpa" placeholder="Example: 18.5">
+
+
+<label>IELTS Score</label>
+<input name="ielts" placeholder="Example: 8">
+
+
+<label>TOPIK Level</label>
+<input name="korean" placeholder="Example: 5">
+
+
+<label>Number of Projects</label>
+<input name="projects" placeholder="Example: 3">
+
+
+<button>
+Analyze My Profile 🚀
+</button>
+
+</form>
+
+
+{% if result %}
+
+<div class="result">
+
+<h2>
+Your Score: {{result.score}}%
+</h2>
+
+<h3>
+{{result.level}}
+</h3>
+
+</div>
+
+{% endif %}
+
+</div>
+
+
+<h2>🏫 Recommended Universities</h2>
+
+
+{% for uni in universities %}
+
+<div class="university">
+
+{{uni.symbol}}
+{{uni.name}}
+
+</div>
+
+{% endfor %}
+
+
+</div>
+
+</body>
+
+</html>
